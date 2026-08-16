@@ -13,6 +13,18 @@
   --card: #1E2230;
   --muted: #A1A1AA;
   --border: #2A2F3A;
+
+  /* Skills Colors */
+  --html: #E34F26;
+  --css: #1572B6;
+  --javascript: #F7DF1E;
+  --bootstrap: #7952B3;
+  --tailwind: #06B6D4;
+  --react: #61DAFB;
+  --typescript: #3178C6;
+  --nextjs: #FFFFFF;
+  --git: #F05032;
+  --github: #FFFFFF;
 }
 
 @theme inline {
@@ -22,10 +34,24 @@
   /* Portfolio Colors */
   --color-primary: var(--primary);
   --color-secondary: var(--secondary);
+
+  /* UI Colors */
   --color-section: var(--section);
   --color-card: var(--card);
   --color-muted: var(--muted);
   --color-border: var(--border);
+
+  /* Skills Colors */
+  --color-html: var(--html);
+  --color-css: var(--css);
+  --color-javascript: var(--javascript);
+  --color-bootstrap: var(--bootstrap);
+  --color-tailwind: var(--tailwind);
+  --color-react: var(--react);
+  --color-typescript: var(--typescript);
+  --color-nextjs: var(--nextjs);
+  --color-git: var(--git);
+  --color-github: var(--github);
 
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
@@ -45,7 +71,24 @@
     --card: #1E2230;
     --muted: #A1A1AA;
     --border: #2A2F3A;
+
+    /* Skills Colors */
+    --html: #E34F26;
+    --css: #1572B6;
+    --javascript: #F7DF1E;
+    --bootstrap: #7952B3;
+    --tailwind: #06B6D4;
+    --react: #61DAFB;
+    --typescript: #3178C6;
+    --nextjs: #FFFFFF;
+    --git: #F05032;
+    --github: #FFFFFF;
   }
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
 }
 
 body {

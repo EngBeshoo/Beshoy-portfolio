@@ -4,7 +4,7 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-6 text-center">
 
         <p className="text-lg font-semibold">
-          Beshoy Essa Azer
+          Beshoy Eissa Azer
         </p>
 
         <p className="mt-2 text-sm text-muted">
@@ -12,7 +12,7 @@ export default function Footer() {
         </p>
 
         <p className="mt-5 text-sm text-muted">
-          © {new Date().getFullYear()} Beshoy Essa Azer. All rights reserved.
+          © {new Date().getFullYear()} Beshoy Eissa Azer. All rights reserved.
         </p>
 
       </div>
