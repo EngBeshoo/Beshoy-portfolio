@@ -1,7 +1,7 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { Mail, Send } from "lucide-react";
+import { motion } from "framer-motion";
 
 export default function Contact() {
   return (
@@ -32,66 +32,103 @@ export default function Contact() {
 
         {/* Contact Form */}
         <motion.form
+          action="https://api.web3forms.com/submit"
+          method="POST"
           className="space-y-5"
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
-          transition={{
-            duration: 0.7,
-            delay: 0.2,
-          }}
+          transition={{ duration: 0.7 }}
         >
 
-          {/* Name */}
+          {/* Web3Forms Access Key */}
           <input
-            type="text"
-            placeholder="Your Name"
-            className="w-full rounded-xl border border-border bg-card px-5 py-4 outline-none transition focus:border-primary focus:ring-1 focus:ring-primary"
+            type="hidden"
+            name="access_key"
+            value="f5509795-9177-4e47-8f77-14a91f31e69b"
           />
+
+          {/* Subject */}
+          <input
+            type="hidden"
+            name="subject"
+            value="New Message From Beshoy Portfolio"
+          />
+
+          {/* From Name */}
+          <input
+            type="hidden"
+            name="from_name"
+            value="Beshoy Portfolio"
+          />
+
+          {/* Name */}
+          <div>
+            <label className="mb-2 block font-medium">
+              Your Name
+            </label>
+
+            <input
+              type="text"
+              name="name"
+              placeholder="Enter your name"
+              required
+              className="w-full rounded-xl border border-border bg-card px-5 py-4 outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
+            />
+          </div>
 
           {/* Email */}
-          <input
-            type="email"
-            placeholder="Your Email"
-            className="w-full rounded-xl border border-border bg-card px-5 py-4 outline-none transition focus:border-primary focus:ring-1 focus:ring-primary"
-          />
+          <div>
+            <label className="mb-2 block font-medium">
+              Your Email
+            </label>
+
+            <input
+              type="email"
+              name="email"
+              placeholder="Enter your email"
+              required
+              className="w-full rounded-xl border border-border bg-card px-5 py-4 outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
+            />
+          </div>
 
           {/* Message */}
-          <textarea
-            rows={6}
-            placeholder="Your Message"
-            className="w-full resize-none rounded-xl border border-border bg-card px-5 py-4 outline-none transition focus:border-primary focus:ring-1 focus:ring-primary"
-          />
+          <div>
+            <label className="mb-2 block font-medium">
+              Your Message
+            </label>
 
-          {/* Submit */}
-          <motion.button
+            <textarea
+              name="message"
+              rows={6}
+              placeholder="Write your message..."
+              required
+              className="w-full resize-none rounded-xl border border-border bg-card px-5 py-4 outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
+            />
+          </div>
+
+          {/* Submit Button */}
+          <button
             type="submit"
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
             className="flex w-full items-center justify-center gap-2 rounded-xl bg-primary py-4 font-semibold text-white transition hover:bg-secondary"
           >
-            <Send size={19} />
+            <Send size={20} />
             Send Message
-          </motion.button>
+          </button>
 
         </motion.form>
 
         {/* Email */}
-        <motion.div
-          className="mt-8 flex justify-center"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.4, duration: 0.5 }}
-        >
+        <div className="mt-8 flex items-center justify-center gap-2 text-muted">
+          <Mail size={18} className="text-primary" />
+
           <a
             href="mailto:bghazr@gmail.com"
-            className="flex items-center gap-2 text-muted transition hover:text-primary"
+            className="transition hover:text-primary"
           >
-            <Mail size={18} />
             bghazr@gmail.com
           </a>
-        </motion.div>
+        </div>
 
       </div>
     </section>

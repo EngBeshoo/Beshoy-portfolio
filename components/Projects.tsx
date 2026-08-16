@@ -25,13 +25,13 @@ const projects = [
     github: "https://github.com/EngBeshoo/TaskWeather",
   },
   {
-    title: "Book Store",
+    title: "َQuiz App",
     description:
-      "A simple responsive book management website built with JavaScript.",
+      "A responsive Quiz App built with JavaScript, featuring multiple-choice questions, difficulty levels, categories, and score tracking",
     technologies: ["HTML", "CSS", "JavaScript","API"],
-    image: "/images/books.png",
-    demo: "#",
-    github: "#",
+    image: "/images/QuizApp.png",
+    demo: "https://engbeshoo.github.io/QuizApp/",
+    github: "https://github.com/EngBeshoo/QuizApp",
   },
 ];
 

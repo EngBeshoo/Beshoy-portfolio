@@ -43,7 +43,7 @@ export default function Home() {
             >
 
               <motion.p
-                className="text-lg font-medium text-primary"
+                className="text-lg font-medium text-primary text-3xl"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2, duration: 0.5 }}
