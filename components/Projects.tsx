@@ -52,7 +52,7 @@ const projects = [
       "A responsive food website that allows users to explore and discover a variety of meals with detailed information and an interactive user-friendly interface",
     technologies: ["HTML", "CSS", "JavaScript","API"],
     image: "/images/Yummy.png",
-    demo: "file:///D:/Download/BeshoyWorkShop/index.html",
+    demo: "https://engbeshoo.github.io/BeshoyWorkShop/",
     github: "https://github.com/EngBeshoo/BeshoyWorkShop",
   },
 ];

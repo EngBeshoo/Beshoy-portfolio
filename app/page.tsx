@@ -127,7 +127,7 @@ export default function Home() {
                 </a>
 
                 <a
-                  href="https://www.linkedin.com/in/beshoy-essa-azer-98a117363/"
+                  href="https://www.linkedin.com/in/beshoy-eissa-azer-98a117363/"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="LinkedIn"
