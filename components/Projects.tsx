@@ -85,8 +85,8 @@ const reactProjects = [
   description:
     "Graduation project focused on lost and found items, allowing users to report lost belongings, search for found items, and connect with others to recover their missing items.",
   technologies: ["React", "TSX", "API"],
-  image: "/images/day3.png",
-  github: "YOUR_GITHUB_LINK",
+  image: "/images/DAY3.png",
+  github: "https://github.com/malakehab2003/LostFoundSystem.git",
   category: "Graduation Project",
 },
 ];
