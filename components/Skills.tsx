@@ -139,7 +139,7 @@ export default function Skills() {
                 key={skill.name}
                 style={
                   {
-                    "--skill-color": skill.color,
+                    "--skill-color": skill,
                   } as React.CSSProperties
                 }
                 className="

@@ -69,6 +69,7 @@ const reactProjects = [
       "A modern social media application built with React and , featuring user authentication, posts, profiles, and an interactive social experience.",
     technologies: ["React", "JSX", "API"],
     image: "/images/social-app.png",
+    // demo: "#",
     github: "https://github.com/EngBeshoo/Social-app.git",
   },
 ];
@@ -81,7 +82,7 @@ type Project = {
   description: string;
   technologies: string[];
   image: string;
-  demo: string;
+  demo?: string;
   github: string;
 };
 
