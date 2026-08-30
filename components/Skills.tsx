@@ -18,48 +18,60 @@ import {
   SiNextdotjs,
 } from "react-icons/si";
 
+
 const skills = [
   {
     name: "HTML5",
     icon: FaHtml5,
+    className: "html-icon",
   },
   {
     name: "CSS3",
     icon: FaCss3Alt,
+    className: "css-icon",
   },
   {
     name: "JavaScript",
     icon: FaJs,
+    className: "javascript-icon",
   },
   {
     name: "Bootstrap",
     icon: FaBootstrap,
+    className: "bootstrap-icon",
   },
   {
     name: "Tailwind CSS",
     icon: SiTailwindcss,
+    className: "tailwind-icon",
   },
   {
     name: "React",
     icon: FaReact,
+    className: "react-icon",
   },
   {
     name: "TypeScript",
     icon: SiTypescript,
+    className: "typescript-icon",
   },
   {
     name: "Next.js",
     icon: SiNextdotjs,
+    className: "nextjs-icon",
   },
   {
     name: "Git",
     icon: FaGitAlt,
+    className: "git-icon",
   },
   {
     name: "GitHub",
     icon: FaGithub,
+    className: "github-icon",
   },
 ];
+
 
 export default function Skills() {
   return (
@@ -70,12 +82,24 @@ export default function Skills() {
       <div className="mx-auto max-w-7xl px-6">
 
         {/* Section Title */}
+
         <motion.div
           className="mb-12 text-center"
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.6 }}
+          initial={{
+            opacity: 0,
+            y: 40,
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+          }}
+          viewport={{
+            once: true,
+            amount: 0.3,
+          }}
+          transition={{
+            duration: 0.6,
+          }}
         >
           <p className="mb-2 font-medium text-primary">
             My Skills
@@ -94,7 +118,9 @@ export default function Skills() {
           </p>
         </motion.div>
 
+
         {/* Skills */}
+
         <div
           className="
             grid
@@ -111,7 +137,13 @@ export default function Skills() {
             return (
               <motion.div
                 key={skill.name}
+                style={
+                  {
+                    "--skill-color": skill.color,
+                  } as React.CSSProperties
+                }
                 className="
+                  skill-card
                   group
                   relative
                   flex
@@ -149,8 +181,11 @@ export default function Skills() {
               >
 
                 {/* Icon */}
+
                 <motion.div
-                  initial={{ scale: 1 }}
+                  initial={{
+                    scale: 1,
+                  }}
                   whileHover={{
                     scale: 1.15,
                     rotate: 5,
@@ -161,16 +196,13 @@ export default function Skills() {
                 >
                   <Icon
                     size={60}
-                    className="
-                      text-soft-clay
-                      transition-colors
-                      duration-300
-                      group-hover:text-primary
-                    "
+                    className={`skill-icon ${skill.className}`}
                   />
                 </motion.div>
 
+
                 {/* Tooltip */}
+
                 <div
                   className="
                     pointer-events-none
@@ -198,6 +230,7 @@ export default function Skills() {
                   {skill.name}
 
                   {/* Tooltip Arrow */}
+
                   <span
                     className="
                       absolute
