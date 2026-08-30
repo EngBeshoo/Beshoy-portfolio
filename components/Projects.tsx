@@ -24,7 +24,7 @@ const frontendProjects = [
     title: "Weather App",
     description:
       "A responsive weather application that displays weather information using an API.",
-    technologies: ["HTML", "CSS", "JavaScript", "API"],
+    technologies: ["HTML", "CSS", "JS", "API"],
     image: "/images/weather.png",
     demo: "https://engbeshoo.github.io/TaskWeather/",
     github: "https://github.com/EngBeshoo/TaskWeather",
@@ -34,7 +34,7 @@ const frontendProjects = [
     title: "Quiz App",
     description:
       "A responsive Quiz App built with JavaScript, featuring multiple-choice questions, difficulty levels, categories, and score tracking.",
-    technologies: ["HTML", "CSS", "JavaScript", "API"],
+    technologies: ["HTML", "CSS", "JS", "API"],
     image: "/images/QuizApp.png",
     demo: "https://engbeshoo.github.io/QuizApp/",
     github: "https://github.com/EngBeshoo/QuizApp",
@@ -43,8 +43,8 @@ const frontendProjects = [
   {
     title: "Login App",
     description:
-      "A responsive Login & Sign Up system built with JavaScript, featuring form validation, Regular Expressions, Local Storage, and user authentication.",
-    technologies: ["HTML", "CSS", "JavaScript"],
+      "A responsive Login & Sign Up system built with JS, featuring form validation, Regular Expressions, Local Storage, and user authentication.",
+    technologies: ["HTML", "CSS", "JS"],
     image: "/images/login.png",
     demo: "https://engbeshoo.github.io/LogInTask3/",
     github: "https://github.com/EngBeshoo/LogInTask3",
@@ -54,7 +54,7 @@ const frontendProjects = [
     title: "Yummy",
     description:
       "A responsive food website that allows users to explore and discover a variety of meals with detailed information and an interactive user-friendly interface.",
-    technologies: ["HTML", "CSS", "JavaScript", "API"],
+    technologies: ["HTML", "CSS", "JS", "API"],
     image: "/images/Yummy.png",
     demo: "https://engbeshoo.github.io/BeshoyWorkShop/",
     github: "https://github.com/EngBeshoo/BeshoyWorkShop",
@@ -69,13 +69,27 @@ const reactProjects = [
       "A modern social media application built with React and , featuring user authentication, posts, profiles, and an interactive social experience.",
     technologies: ["React", "JSX", "API"],
     image: "/images/social-app.png",
-    // demo: "#",
+     demo: "https://social-app-qsni-git-main-engbeshoos-projects.vercel.app/",
     github: "https://github.com/EngBeshoo/Social-app.git",
   },
+  {
+  title: "BUBBLES & BLISS",
+  description:
+    "A modern perfume e-commerce website built with Next.js, developed as a full-stack project in collaboration with a backend developer, featuring product browsing, authentication, and API integration.",
+  technologies: ["Next.js",  "TSX", "API"],
+  image: "/images/BUBBLES.png",
+  github: "https://github.com/malakehab2003/Bubbles-and-bliss.git",
+  },
+  {
+  title: "DAY3",
+  description:
+    "Graduation project focused on lost and found items, allowing users to report lost belongings, search for found items, and connect with others to recover their missing items.",
+  technologies: ["React", "TSX", "API"],
+  image: "/images/day3.png",
+  github: "YOUR_GITHUB_LINK",
+  category: "Graduation Project",
+},
 ];
-
-
-
 
 type Project = {
   title: string;
@@ -143,8 +157,6 @@ function ProjectCard({ project, index }: ProjectCardProps) {
           "
         />
 
-        {/* Overlay */}
-
         <div
           className="
             absolute
@@ -158,25 +170,15 @@ function ProjectCard({ project, index }: ProjectCardProps) {
       </div>
 
 
-      {/* Project Content */}
-
       <div className="p-6">
-
-        {/* Title */}
 
         <h3 className="text-2xl font-bold">
           {project.title}
         </h3>
 
-
-        {/* Description */}
-
         <p className="mt-3 leading-7 text-muted">
           {project.description}
         </p>
-
-
-        {/* Technologies */}
 
         <div className="mt-4 flex flex-wrap gap-2">
           {project.technologies.map((tech) => (
@@ -197,12 +199,7 @@ function ProjectCard({ project, index }: ProjectCardProps) {
         </div>
 
 
-        {/* Buttons */}
-
         <div className="mt-6 flex gap-3">
-
-          
-
 
           {project.demo &&           <a
             href={project.demo}
@@ -227,9 +224,6 @@ function ProjectCard({ project, index }: ProjectCardProps) {
             Live Demo
           </a> }
 
-
-          {/* GitHub */}
-
           <a
             href={project.github}
             target="_blank"
@@ -253,18 +247,11 @@ function ProjectCard({ project, index }: ProjectCardProps) {
             <FaGithub size={17} />
             GitHub
           </a>
-
         </div>
-
       </div>
     </motion.div>
   );
 }
-
-
-// ========================================
-// Projects Component
-// ========================================
 
 export default function Projects() {
 
@@ -281,11 +268,6 @@ export default function Projects() {
       className="bg-section py-24"
     >
       <div className="mx-auto max-w-7xl px-6">
-
-
-        {/* ========================================
-            Section Title
-        ======================================== */}
 
         <motion.div
           className="mb-16 text-center"
@@ -317,10 +299,6 @@ export default function Projects() {
           </h2>
         </motion.div>
 
-
-        {/* ========================================
-            HTML / CSS / JavaScript
-        ======================================== */}
 
         <motion.div
           initial={{
@@ -355,8 +333,6 @@ export default function Projects() {
         </motion.div>
 
 
-        {/* Frontend Projects */}
-
         <motion.div
           layout
           className="
@@ -375,8 +351,6 @@ export default function Projects() {
           ))}
         </motion.div>
 
-
-        {/* Show More / Show Less */}
 
         {frontendProjects.length > 3 && (
           <motion.div
@@ -427,11 +401,6 @@ export default function Projects() {
           </motion.div>
         )}
 
-
-        {/* ========================================
-            React / Next.js
-        ======================================== */}
-
         <motion.div
           initial={{
             opacity: 0,
@@ -463,9 +432,6 @@ export default function Projects() {
             <div className="h-px flex-1 bg-border" />
           </div>
         </motion.div>
-
-
-        {/* React Projects */}
 
         <motion.div
           layout
