@@ -15,7 +15,7 @@ export default function About() {
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6 }}
         >
-          <p className="mb-2 text-primary">
+          <p className="mb-2 font-medium text-primary">
             About Me
           </p>
 
@@ -35,23 +35,22 @@ export default function About() {
             delay: 0.2,
           }}
         >
-
           <p className="text-lg leading-8 text-muted">
             I&apos;m Beshoy Eissa Azer, a Frontend Developer passionate about
-            building modern, responsive and user-friendly web applications.
+            building modern, responsive, and user-friendly web applications.
           </p>
 
           <p className="mt-5 text-lg leading-8 text-muted">
-            I have experience working with HTML, CSS, JavaScript, React,
-            TypeScript and Next.js. I enjoy turning ideas and designs into
-            clean and interactive web experiences.
+            I specialize in building interactive web experiences using
+            React, Next.js, JavaScript, TypeScript, and modern frontend
+            technologies.
           </p>
 
           <p className="mt-5 text-lg leading-8 text-muted">
-            I&apos;m always learning new technologies and improving my skills
-            to build better and more efficient web applications.
+            I enjoy transforming ideas and designs into clean, responsive,
+            and engaging interfaces while continuously improving my skills
+            and learning new technologies.
           </p>
-
         </motion.div>
 
       </div>

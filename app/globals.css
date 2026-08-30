@@ -1,98 +1,148 @@
 @import "tailwindcss";
 
 :root {
-  --background: #0F1117;
-  --foreground: #FFFFFF;
+  /* ========================================
+     🎨 Main Portfolio Colors
+     ======================================== */
 
-  /* Portfolio Colors */
-  --primary: #8022FE;
-  --secondary: #5B21B6;
+  /* Deep Cherry - Main Dark Red */
+  --deep-cherry: #8E1B1B;
 
-  /* UI Colors */
-  --section: #171A23;
-  --card: #1E2230;
-  --muted: #A1A1AA;
-  --border: #2A2F3A;
+  /* Tomato Red - Primary Accent */
+  --tomato: #D34A32;
 
-  /* Skills Colors */
-  --html: #E34F26;
-  --css: #1572B6;
-  --javascript: #F7DF1E;
-  --bootstrap: #7952B3;
-  --tailwind: #06B6D4;
-  --react: #61DAFB;
-  --typescript: #3178C6;
-  --nextjs: #FFFFFF;
-  --git: #F05032;
-  --github: #FFFFFF;
+  /* Soft Clay - Secondary Accent */
+  --soft-clay: #C98B6A;
+
+  /* Blush Cream - Light Text */
+  --cream: #F6D9CD;
+
+  /* Cocoa Line - Dark Brown */
+  --cocoa: #3A241F;
+
+
+  /* ========================================
+     🖥️ Background & Text
+     ======================================== */
+
+  --background: #120707;
+  --foreground: #F6D9CD;
+
+
+  /* ========================================
+     🧩 UI Colors
+     ======================================== */
+
+  /* Sections */
+  --section: #180A09;
+
+  /* Cards */
+  --card: #21100E;
+
+  /* Secondary / Muted Text */
+  --muted: #C98B6A;
+
+  /* Borders */
+  --border: #4A2922;
+
+
+  /* ========================================
+     🔥 Extra UI Colors
+     ======================================== */
+
+  /* Main buttons / links */
+  --primary: #D34A32;
+
+  /* Hover buttons */
+  --secondary: #8E1B1B;
+
+  /* Highlight */
+  --accent: #C98B6A;
+
+  /* Very light text */
+  --light: #F6D9CD;
+
+  /* Dark surface */
+  --surface: #3A241F;
 }
 
+
+/* ========================================
+   🎨 Tailwind Theme
+   ======================================== */
+
 @theme inline {
+  /* Main */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
 
   /* Portfolio Colors */
-  --color-primary: var(--primary);
-  --color-secondary: var(--secondary);
+  --color-deep-cherry: var(--deep-cherry);
+  --color-tomato: var(--tomato);
+  --color-soft-clay: var(--soft-clay);
+  --color-cream: var(--cream);
+  --color-cocoa: var(--cocoa);
 
-  /* UI Colors */
+  /* UI */
   --color-section: var(--section);
   --color-card: var(--card);
   --color-muted: var(--muted);
   --color-border: var(--border);
 
-  /* Skills Colors */
-  --color-html: var(--html);
-  --color-css: var(--css);
-  --color-javascript: var(--javascript);
-  --color-bootstrap: var(--bootstrap);
-  --color-tailwind: var(--tailwind);
-  --color-react: var(--react);
-  --color-typescript: var(--typescript);
-  --color-nextjs: var(--nextjs);
-  --color-git: var(--git);
-  --color-github: var(--github);
+  /* Extra */
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  --color-light: var(--light);
+  --color-surface: var(--surface);
 
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* Font */
+  --font-sans: Arial, Helvetica, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0F1117;
-    --foreground: #FFFFFF;
 
-    /* Portfolio Colors */
-    --primary: #8022FE;
-    --secondary: #5B21B6;
-
-    /* UI Colors */
-    --section: #171A23;
-    --card: #1E2230;
-    --muted: #A1A1AA;
-    --border: #2A2F3A;
-
-    /* Skills Colors */
-    --html: #E34F26;
-    --css: #1572B6;
-    --javascript: #F7DF1E;
-    --bootstrap: #7952B3;
-    --tailwind: #06B6D4;
-    --react: #61DAFB;
-    --typescript: #3178C6;
-    --nextjs: #FFFFFF;
-    --git: #F05032;
-    --github: #FFFFFF;
-  }
-}
+/* ========================================
+   🌐 Global Styles
+   ======================================== */
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 80px;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* ========================================
+   ✨ Selection
+   ======================================== */
+
+::selection {
+  background: var(--tomato);
+  color: var(--cream);
+}
+
+
+/* ========================================
+   🖱️ Scrollbar
+   ======================================== */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--deep-cherry);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--tomato);
 }

@@ -22,58 +22,51 @@ const skills = [
   {
     name: "HTML5",
     icon: FaHtml5,
-    color: "var(--html)",
   },
   {
     name: "CSS3",
     icon: FaCss3Alt,
-    color: "var(--css)",
   },
   {
     name: "JavaScript",
     icon: FaJs,
-    color: "var(--javascript)",
   },
   {
     name: "Bootstrap",
     icon: FaBootstrap,
-    color: "var(--bootstrap)",
   },
   {
     name: "Tailwind CSS",
     icon: SiTailwindcss,
-    color: "var(--tailwind)",
   },
   {
     name: "React",
     icon: FaReact,
-    color: "var(--react)",
   },
   {
     name: "TypeScript",
     icon: SiTypescript,
-    color: "var(--typescript)",
   },
   {
     name: "Next.js",
     icon: SiNextdotjs,
-    color: "var(--nextjs)",
   },
   {
     name: "Git",
     icon: FaGitAlt,
-    color: "var(--git)",
   },
   {
     name: "GitHub",
     icon: FaGithub,
-    color: "var(--github)",
   },
 ];
 
 export default function Skills() {
   return (
-    <section id="skills" className="bg-background py-24">
+    <section
+      id="skills"
+      className="bg-background py-24"
+    >
       <div className="mx-auto max-w-7xl px-6">
 
         {/* Section Title */}
@@ -84,7 +77,7 @@ export default function Skills() {
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6 }}
         >
-          <p className="mb-2 text-primary">
+          <p className="mb-2 font-medium text-primary">
             My Skills
           </p>
 
@@ -94,21 +87,61 @@ export default function Skills() {
               I Use
             </span>
           </h2>
+
+          <p className="mx-auto mt-4 max-w-2xl text-muted">
+            Technologies and tools I use to build modern,
+            responsive and interactive web applications.
+          </p>
         </motion.div>
 
         {/* Skills */}
-        <div className="grid grid-cols-2 gap-5 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
-
+        <div
+          className="
+            grid
+            grid-cols-2
+            gap-5
+            sm:grid-cols-3
+            md:grid-cols-4
+            lg:grid-cols-5
+          "
+        >
           {skills.map((skill, index) => {
             const Icon = skill.icon;
 
             return (
               <motion.div
                 key={skill.name}
-                className="group relative flex h-36 items-center justify-center rounded-xl border border-border bg-card text-center transition-all duration-300 hover:-translate-y-2 hover:border-primary hover:shadow-lg hover:shadow-primary/10"
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.2 }}
+                className="
+                  group
+                  relative
+                  flex
+                  h-36
+                  items-center
+                  justify-center
+                  rounded-2xl
+                  border
+                  border-border
+                  bg-card
+                  text-center
+                  transition-all
+                  duration-300
+                  hover:-translate-y-2
+                  hover:border-primary
+                  hover:shadow-xl
+                  hover:shadow-primary/10
+                "
+                initial={{
+                  opacity: 0,
+                  y: 40,
+                }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0,
+                }}
+                viewport={{
+                  once: true,
+                  amount: 0.2,
+                }}
                 transition={{
                   duration: 0.5,
                   delay: index * 0.05,
@@ -128,12 +161,12 @@ export default function Skills() {
                 >
                   <Icon
                     size={60}
-                    className="text-muted transition-colors duration-300 group-hover:text-[var(--skill-color)]"
-                    style={
-                      {
-                        "--skill-color": skill.color,
-                      } as React.CSSProperties
-                    }
+                    className="
+                      text-soft-clay
+                      transition-colors
+                      duration-300
+                      group-hover:text-primary
+                    "
                   />
                 </motion.div>
 
@@ -182,7 +215,6 @@ export default function Skills() {
               </motion.div>
             );
           })}
-
         </div>
 
       </div>

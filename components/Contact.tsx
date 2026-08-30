@@ -16,15 +16,18 @@ export default function Contact() {
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6 }}
         >
-          <p className="mb-2 text-primary">
+          <p className="mb-2 text-primary font-medium">
             Get In Touch
           </p>
 
           <h2 className="text-4xl font-bold">
-            Contact <span className="text-primary">Me</span>
+            Contact{" "}
+            <span className="text-primary">
+              Me
+            </span>
           </h2>
 
-          <p className="mx-auto mt-4 max-w-2xl text-muted">
+          <p className="mx-auto mt-4 max-w-2xl text-muted leading-7">
             Have a project in mind or want to discuss an opportunity?
             Feel free to get in touch with me.
           </p>
@@ -64,7 +67,7 @@ export default function Contact() {
 
           {/* Name */}
           <div>
-            <label className="mb-2 block font-medium">
+            <label className="mb-2 block font-medium text-foreground">
               Your Name
             </label>
 
@@ -73,13 +76,28 @@ export default function Contact() {
               name="name"
               placeholder="Enter your name"
               required
-              className="w-full rounded-xl border border-border bg-card px-5 py-4 outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
+              className="
+                w-full
+                rounded-xl
+                border
+                border-border
+                bg-card
+                px-5
+                py-4
+                text-foreground
+                placeholder:text-muted/70
+                outline-none
+                transition
+                focus:border-primary
+                focus:ring-2
+                focus:ring-primary/20
+              "
             />
           </div>
 
           {/* Email */}
           <div>
-            <label className="mb-2 block font-medium">
+            <label className="mb-2 block font-medium text-foreground">
               Your Email
             </label>
 
@@ -88,13 +106,28 @@ export default function Contact() {
               name="email"
               placeholder="Enter your email"
               required
-              className="w-full rounded-xl border border-border bg-card px-5 py-4 outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
+              className="
+                w-full
+                rounded-xl
+                border
+                border-border
+                bg-card
+                px-5
+                py-4
+                text-foreground
+                placeholder:text-muted/70
+                outline-none
+                transition
+                focus:border-primary
+                focus:ring-2
+                focus:ring-primary/20
+              "
             />
           </div>
 
           {/* Message */}
           <div>
-            <label className="mb-2 block font-medium">
+            <label className="mb-2 block font-medium text-foreground">
               Your Message
             </label>
 
@@ -103,24 +136,70 @@ export default function Contact() {
               rows={6}
               placeholder="Write your message..."
               required
-              className="w-full resize-none rounded-xl border border-border bg-card px-5 py-4 outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
+              className="
+                w-full
+                resize-none
+                rounded-xl
+                border
+                border-border
+                bg-card
+                px-5
+                py-4
+                text-foreground
+                placeholder:text-muted/70
+                outline-none
+                transition
+                focus:border-primary
+                focus:ring-2
+                focus:ring-primary/20
+              "
             />
           </div>
 
           {/* Submit Button */}
           <button
             type="submit"
-            className="flex w-full items-center justify-center gap-2 rounded-xl bg-primary py-4 font-semibold text-white transition hover:bg-secondary"
+            className="
+              group
+              flex
+              w-full
+              items-center
+              justify-center
+              gap-2
+              rounded-xl
+              bg-primary
+              py-4
+              font-semibold
+              text-white
+              transition
+              duration-300
+              hover:bg-deep-cherry
+              hover:shadow-lg
+              hover:shadow-primary/20
+            "
           >
-            <Send size={20} />
+            <Send
+              size={20}
+              className="transition-transform duration-300 group-hover:translate-x-1"
+            />
+
             Send Message
           </button>
 
         </motion.form>
 
         {/* Email */}
-        <div className="mt-8 flex items-center justify-center gap-2 text-muted">
-          <Mail size={18} className="text-primary" />
+        <motion.div
+          className="mt-8 flex items-center justify-center gap-2 text-muted"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.3 }}
+        >
+          <Mail
+            size={18}
+            className="text-primary"
+          />
 
           <a
             href="mailto:bghazr@gmail.com"
@@ -128,7 +207,7 @@ export default function Contact() {
           >
             bghazr@gmail.com
           </a>
-        </div>
+        </motion.div>
 
       </div>
     </section>
