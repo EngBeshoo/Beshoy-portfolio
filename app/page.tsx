@@ -227,7 +227,7 @@ export default function Home() {
 
                 {/* CV */}
                 <a
-                  href="https://drive.google.com/file/d/1wZWbOjBwfq9QN2AARsA_nl-iSLyD6iJQ/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1cxiSYL_18JKI0BBzlh2CAmm8TJpO2zw3/view?usp=drive_link"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 rounded-xl border border-border px-6 py-3 font-medium text-soft-clay transition duration-300 hover:border-tomato hover:text-cream"
@@ -279,7 +279,6 @@ export default function Home() {
 
             </motion.div>
 
-            {/* ================= RIGHT ================= */}
             <motion.div
               className="order-1 flex w-full justify-center md:order-2 md:w-1/2"
               initial={{ opacity: 0, x: 60, scale: 0.9 }}
