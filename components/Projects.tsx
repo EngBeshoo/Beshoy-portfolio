@@ -6,9 +6,6 @@ import { FaGithub } from "react-icons/fa";
 import { ExternalLink, ChevronDown } from "lucide-react";
 import { useState } from "react";
 
-
-
-
 const frontendProjects = [
   {
     title: "GameStore",
@@ -19,7 +16,6 @@ const frontendProjects = [
     demo: "https://engbeshoo.github.io/GameStore/",
     github: "https://github.com/EngBeshoo/GameStore",
   },
-
   {
     title: "Weather App",
     description:
@@ -29,7 +25,6 @@ const frontendProjects = [
     demo: "https://engbeshoo.github.io/TaskWeather/",
     github: "https://github.com/EngBeshoo/TaskWeather",
   },
-
   {
     title: "Quiz App",
     description:
@@ -39,7 +34,6 @@ const frontendProjects = [
     demo: "https://engbeshoo.github.io/QuizApp/",
     github: "https://github.com/EngBeshoo/QuizApp",
   },
-
   {
     title: "Login App",
     description:
@@ -49,7 +43,6 @@ const frontendProjects = [
     demo: "https://engbeshoo.github.io/LogInTask3/",
     github: "https://github.com/EngBeshoo/LogInTask3",
   },
-
   {
     title: "Yummy",
     description:
@@ -61,7 +54,6 @@ const frontendProjects = [
   },
 ];
 
-
 const reactProjects = [
   {
     title: "Social App",
@@ -69,26 +61,36 @@ const reactProjects = [
       "A modern social media application built with React and , featuring user authentication, posts, profiles, and an interactive social experience.",
     technologies: ["React", "JSX", "API"],
     image: "/images/social-app.png",
-     demo: "https://social-app-qsni-git-main-engbeshoos-projects.vercel.app/",
+    demo: "https://social-app-qsni-git-main-engbeshoos-projects.vercel.app/",
     github: "https://github.com/EngBeshoo/Social-app.git",
   },
   {
-  title: "BUBBLES & BLISS",
-  description:
-    "A modern perfume e-commerce website built with Next.js, developed as a full-stack project in collaboration with a backend developer, featuring product browsing, authentication, and API integration.",
-  technologies: ["Next.js",  "TSX", "API"],
-  image: "/images/BUBBLES.png",
-  github: "https://github.com/malakehab2003/Bubbles-and-bliss.git",
+    title: "E-commerce",
+    description:
+      "A modern and responsive e-commerce web application built with Next.js, featuring user authentication, product browsing, product details, cart and wishlist functionality, and API integration for a seamless online shopping experience.",
+    technologies: ["Next.js", "TSX", "API"],
+    image: "/images/Ecommerse.png",
+    demo: "https://e-commerse-git-main-engbeshoos-projects.vercel.app/",
+    github: "https://github.com/EngBeshoo/E-commerse.git",
+    category: "Graduation Project",
   },
   {
-  title: "DAY3",
-  description:
-    "Graduation project focused on lost and found items, allowing users to report lost belongings, search for found items, and connect with others to recover their missing items.",
-  technologies: ["React", "TSX", "API"],
-  image: "/images/DAY3.png",
-  github: "https://github.com/malakehab2003/LostFoundSystem.git",
-  category: "Graduation Project",
-},
+    title: "DAY3",
+    description:
+      "Graduation project focused on lost and found items, allowing users to report lost belongings, search for found items, and connect with others to recover their missing items.",
+    technologies: ["React", "TSX", "API"],
+    image: "/images/DAY3.png",
+    github: "https://github.com/malakehab2003/LostFoundSystem.git",
+    category: "Graduation Project",
+  },
+  {
+    title: "BUBBLES & BLISS",
+    description:
+      "A modern perfume e-commerce website built with Next.js, developed as a full-stack project in collaboration with a backend developer, featuring product browsing, authentication, and API integration.",
+    technologies: ["Next.js", "TSX", "API"],
+    image: "/images/BUBBLES.png",
+    github: "https://github.com/malakehab2003/Bubbles-and-bliss.git",
+  },
 ];
 
 type Project = {
@@ -141,8 +143,6 @@ function ProjectCard({ project, index }: ProjectCardProps) {
         hover:shadow-primary/10
       "
     >
-      {/* Project Image */}
-
       <div className="relative h-52 overflow-hidden">
         <Image
           src={project.image}
@@ -169,9 +169,7 @@ function ProjectCard({ project, index }: ProjectCardProps) {
         />
       </div>
 
-
       <div className="p-6">
-
         <h3 className="text-2xl font-bold">
           {project.title}
         </h3>
@@ -198,31 +196,31 @@ function ProjectCard({ project, index }: ProjectCardProps) {
           ))}
         </div>
 
-
         <div className="mt-6 flex gap-3">
-
-          {project.demo &&           <a
-            href={project.demo}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="
-              flex
-              items-center
-              gap-2
-              rounded-lg
-              bg-primary
-              px-4
-              py-2
-              text-sm
-              font-medium
-              text-white
-              transition
-              hover:bg-secondary
-            "
-          >
-            <ExternalLink size={16} />
-            Live Demo
-          </a> }
+          {project.demo && (
+            <a
+              href={project.demo}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="
+                flex
+                items-center
+                gap-2
+                rounded-lg
+                bg-primary
+                px-4
+                py-2
+                text-sm
+                font-medium
+                text-white
+                transition
+                hover:bg-secondary
+              "
+            >
+              <ExternalLink size={16} />
+              Live Demo
+            </a>
+          )}
 
           <a
             href={project.github}
@@ -254,13 +252,16 @@ function ProjectCard({ project, index }: ProjectCardProps) {
 }
 
 export default function Projects() {
+  const [showMoreFrontend, setShowMoreFrontend] = useState(false);
+  const [showMoreReact, setShowMoreReact] = useState(false);
 
-  const [showMore, setShowMore] = useState(false);
-
-  const visibleFrontendProjects = showMore
+  const visibleFrontendProjects = showMoreFrontend
     ? frontendProjects
     : frontendProjects.slice(0, 3);
 
+  const visibleReactProjects = showMoreReact
+    ? reactProjects
+    : reactProjects.slice(0, 3);
 
   return (
     <section
@@ -268,7 +269,6 @@ export default function Projects() {
       className="bg-section py-24"
     >
       <div className="mx-auto max-w-7xl px-6">
-
         <motion.div
           className="mb-16 text-center"
           initial={{
@@ -299,7 +299,7 @@ export default function Projects() {
           </h2>
         </motion.div>
 
-
+        {/* HTML - CSS - JavaScript Projects */}
         <motion.div
           initial={{
             opacity: 0,
@@ -332,7 +332,6 @@ export default function Projects() {
           </div>
         </motion.div>
 
-
         <motion.div
           layout
           className="
@@ -351,7 +350,7 @@ export default function Projects() {
           ))}
         </motion.div>
 
-
+        {/* See More - Frontend */}
         {frontendProjects.length > 3 && (
           <motion.div
             className="mt-12 flex justify-center"
@@ -368,7 +367,9 @@ export default function Projects() {
             }}
           >
             <button
-              onClick={() => setShowMore(!showMore)}
+              onClick={() =>
+                setShowMoreFrontend(!showMoreFrontend)
+              }
               className="
                 group
                 flex
@@ -387,20 +388,25 @@ export default function Projects() {
                 hover:text-white
               "
             >
-              {showMore ? "Show Less" : "Show More"}
+              {showMoreFrontend ? "Show Less" : "Show More"}
 
               <ChevronDown
                 size={20}
                 className={`
                   transition-transform
                   duration-300
-                  ${showMore ? "rotate-180" : ""}
+                  ${
+                    showMoreFrontend
+                      ? "rotate-180"
+                      : ""
+                  }
                 `}
               />
             </button>
           </motion.div>
         )}
 
+        {/* React - Next.js Projects */}
         <motion.div
           initial={{
             opacity: 0,
@@ -442,7 +448,7 @@ export default function Projects() {
             lg:grid-cols-3
           "
         >
-          {reactProjects.map((project, index) => (
+          {visibleReactProjects.map((project, index) => (
             <ProjectCard
               key={project.title}
               project={project}
@@ -451,6 +457,61 @@ export default function Projects() {
           ))}
         </motion.div>
 
+        {/* See More - React / Next.js */}
+        {reactProjects.length > 3 && (
+          <motion.div
+            className="mt-12 flex justify-center"
+            initial={{
+              opacity: 0,
+              y: 20,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+            }}
+            viewport={{
+              once: true,
+            }}
+          >
+            <button
+              onClick={() =>
+                setShowMoreReact(!showMoreReact)
+              }
+              className="
+                group
+                flex
+                items-center
+                gap-2
+                rounded-xl
+                border
+                border-primary
+                px-6
+                py-3
+                font-medium
+                text-primary
+                transition
+                duration-300
+                hover:bg-primary
+                hover:text-white
+              "
+            >
+              {showMoreReact ? "Show Less" : "Show More"}
+
+              <ChevronDown
+                size={20}
+                className={`
+                  transition-transform
+                  duration-300
+                  ${
+                    showMoreReact
+                      ? "rotate-180"
+                      : ""
+                  }
+                `}
+              />
+            </button>
+          </motion.div>
+        )}
       </div>
     </section>
   );
